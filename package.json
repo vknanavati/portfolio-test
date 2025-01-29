@@ -1,7 +1,7 @@
 {
   "name": "personal-website",
   "version": "0.1.0",
-  "homepage": "https://vknanavati.github.io/portfolioWebsite",
+  "homepage": "https://vknanavati.github.io/portfolioTest",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.13.3",
