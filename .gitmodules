@@ -1,0 +1,3 @@
+[submodule "src/recipeTS"]
+	path = src/recipeTS
+	url = https://github.com/vknanavati/recipe-app-typescript.git
