@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import {Link, Routes, Route} from 'react-router-dom';
 import {Home} from './components/Home';
 import {About} from './components/About';
-import {RecipeApp} from './components/recipe/RecipeApp';
+// import {RecipeApp} from './components/recipe/RecipeApp';
+import {RecipeAppTS} from './components/recipe/RecipeAppTS';
 import {Favorites} from './components/recipe/Favorites';
 import {MakeRecipe} from './components/recipe/MakeRecipe';
 // import {AboutRecipe} from './components/recipe/AboutRecipe';
@@ -386,7 +387,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/about" element={<About/>}/>
 
-        <Route path="/recipe" element={<RecipeApp favorites={favorites} makeRecipe={makeRecipe}/>}>
+        <Route path="/recipe" element={<RecipeAppTS favorites={favorites} makeRecipe={makeRecipe}/>}>
           <Route path="aboutRecipe" element={<AboutRecipeTS/>}/>
           <Route
             path="homeRecipe"
