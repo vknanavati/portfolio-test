@@ -4,7 +4,7 @@ import {Home} from './components/Home';
 import {About} from './components/About';
 // import {RecipeApp} from './components/recipe/RecipeApp';
 import {RecipeAppTS} from './components/recipe/RecipeAppTS';
-import {Favorites} from './components/recipe/Favorites';
+import {FavoritesTS} from './components/recipe/FavoritesTS';
 import {MakeRecipe} from './components/recipe/MakeRecipe';
 // import {AboutRecipe} from './components/recipe/AboutRecipe';
 import {AboutRecipeTS} from './components/recipe/AboutRecipeTS';
@@ -404,7 +404,7 @@ function App() {
             }
           />
           <Route path="favorites" element={
-            <Favorites
+            <FavoritesTS
               favorites={favorites}
               addFavorite={addFavorite}
               addMakeRecipe={addMakeRecipe}/>
