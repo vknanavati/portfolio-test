@@ -7,7 +7,8 @@ import {Favorites} from './components/recipe/Favorites';
 import {MakeRecipe} from './components/recipe/MakeRecipe';
 // import {AboutRecipe} from './components/recipe/AboutRecipe';
 import {AboutRecipeTS} from './components/recipe/AboutRecipeTS';
-import {HomeRecipe} from './components/recipe/HomeRecipe';
+// import {HomeRecipe} from './components/recipe/HomeRecipe';
+import {HomeRecipeTS} from './components/recipe/HomeRecipeTS';
 import {Hostel} from './components/Hostel';
 import {ToDoList} from './components/ToDoList';
 import {Weather} from './components/Weather';
@@ -390,7 +391,7 @@ function App() {
           <Route
             path="homeRecipe"
             element={
-              <HomeRecipe
+              <HomeRecipeTS
                 addFavorite={addFavorite}
                 foodData={foodData}
                 setFoodData={setFoodData}
