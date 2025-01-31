@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { Recipe, Hits, FoodData, RecipeData } from '../../../types';
 import { Button, Container, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
-import { RecipeCard } from '../../recipeTS/src/components/RecipeCard';
+import { RecipeCardTS } from './RecipeCardTS';
 
 interface HomeRecipeProps {
     recipeData: Hits[]
@@ -104,7 +104,7 @@ export function HomeRecipeTS({
                 {recipeData.map((hit, index) => {
                     // console.log("HIT from recipeData.map:", hit);
                   return (
-                    <RecipeCard
+                    <RecipeCardTS
                       key={index}
                       recipe={hit.recipe}
                       addFavorite={addFavorite}
