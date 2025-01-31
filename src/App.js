@@ -5,7 +5,8 @@ import {About} from './components/About';
 import {RecipeApp} from './components/recipe/RecipeApp';
 import {Favorites} from './components/recipe/Favorites';
 import {MakeRecipe} from './components/recipe/MakeRecipe';
-import {AboutRecipe} from './components/recipe/AboutRecipe';
+// import {AboutRecipe} from './components/recipe/AboutRecipe';
+import {AboutRecipeTS} from './components/recipe/AboutRecipeTS';
 import {HomeRecipe} from './components/recipe/HomeRecipe';
 import {Hostel} from './components/Hostel';
 import {ToDoList} from './components/ToDoList';
@@ -385,7 +386,7 @@ function App() {
         <Route path="/about" element={<About/>}/>
 
         <Route path="/recipe" element={<RecipeApp favorites={favorites} makeRecipe={makeRecipe}/>}>
-          <Route path="aboutRecipe" element={<AboutRecipe/>}/>
+          <Route path="aboutRecipe" element={<AboutRecipeTS/>}/>
           <Route
             path="homeRecipe"
             element={
