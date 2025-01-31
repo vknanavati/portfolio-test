@@ -42,7 +42,7 @@ export function FavoritesTS ({favorites, addFavorite, addMakeRecipe}: FavoritesP
                         {favorites.map((recipe,index) => (
                             <Grid
                                 sx={{
-                                    width: isMobile ? { xs: "100%", sm: "50%", md: "33.33%" } : "",
+                                    width: isMobile ? { xs: "100%", sm: "50%", md: "33.33%" } : "100%",
                                     display: "flex",
                                     justifyContent: "center",
                                 }}
