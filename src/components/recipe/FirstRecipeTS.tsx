@@ -31,6 +31,8 @@ export function FirstRecipeTS({
     handleRemoveNote
 }: FirstRecipeProps) {
 
+    console.log("FIRST RECIPE TS RENDERING")
+
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
