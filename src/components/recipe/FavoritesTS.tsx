@@ -11,6 +11,8 @@ interface FavoritesProps {
 }
 export function FavoritesTS ({favorites, addFavorite, addMakeRecipe}: FavoritesProps) {
 
+    console.log("FAVORITES TSX RENDERING")
+
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
