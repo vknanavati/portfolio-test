@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "lib": ["dom", "es2015"],
+      "jsx": "react",
+      "moduleResolution": "node",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true
+    },
+    "include": [
+      "src"
+, "types.ts", "App.test.tsx", "reportWebVitals.ts", "setupTests.ts", "declaration.d.ts", "global.d.ts"    ]
+  }
