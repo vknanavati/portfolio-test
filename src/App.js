@@ -2,13 +2,10 @@ import { useState, useEffect } from 'react';
 import {Link, Routes, Route} from 'react-router-dom';
 import {Home} from './components/Home';
 import {About} from './components/About';
-// import {RecipeApp} from './components/recipe/RecipeApp';
 import {RecipeAppTS} from './components/recipe/RecipeAppTS';
 import {FavoritesTS} from './components/recipe/FavoritesTS';
-import {MakeRecipe} from './components/recipe/MakeRecipe';
-// import {AboutRecipe} from './components/recipe/AboutRecipe';
+import {MakeRecipeTS} from './components/recipe/MakeRecipeTS';
 import {AboutRecipeTS} from './components/recipe/AboutRecipeTS';
-// import {HomeRecipe} from './components/recipe/HomeRecipe';
 import {HomeRecipeTS} from './components/recipe/HomeRecipeTS';
 import {Hostel} from './components/Hostel';
 import {ToDoList} from './components/ToDoList';
@@ -142,20 +139,33 @@ function App() {
   };
 
   const addMakeRecipe = (recipe) => {
+    // if condition true, recipe not in makeRecipe, recipe is added to makeRecipe
     if (!(makeRecipe.filter(item => item.label === recipe.label).length > 0)){
       setMakeRecipe([...makeRecipe, recipe]);
+
       setAlertRecipe(true);
+
       setTimeout(()=>{
-        setAlertRecipe(false)
+        setAlertRecipe(false);
       }, 3000)
+
       console.log("makeRecipe: ", makeRecipe);
       console.log("recipe added to makeRecipe: ", recipe);
+
     } else {
-        setMakeRecipe(makeRecipe.filter((item)=> item.label !== recipe.label));
+        // check item in makeRecipe and see if item.label in array does not match recipe.label
+        //not matching the label is the condition so it will create a new array of recipes that don't match the recipe.label
+        const updatedMakeRecipe = makeRecipe.filter((item)=> item.label !== recipe.label);
+        setMakeRecipe(updatedMakeRecipe);
+
+        setFilteredRecipe([]);
+
         setAlertRemove(true);
-        setTimeout(()=>{
-          setAlertRemove(false)
+
+        setTimeout(()=> {
+          setAlertRemove(false);
         }, 3000);
+
         console.log("recipe removed: ", recipe);
     }
   };
@@ -411,7 +421,7 @@ function App() {
               }
             />
           <Route path="make" element={
-            <MakeRecipe
+            <MakeRecipeTS
               makeRecipe={makeRecipe}
               addGrocery={addGrocery}
               groceryList={groceryList}
