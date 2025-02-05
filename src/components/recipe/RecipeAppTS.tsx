@@ -7,7 +7,7 @@ interface RecipeAppProps {
     makeRecipe: Recipe[]
     favorites: Recipe[]
 }
-export function RecipeAppTS({makeRecipe, favorites}: RecipeAppProps): JSX.Element {
+export function RecipeAppTS({makeRecipe, favorites}: RecipeAppProps) {
 
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
